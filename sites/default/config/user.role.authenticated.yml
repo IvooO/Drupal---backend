@@ -15,3 +15,6 @@ permissions:
   - 'skip comment approval'
   - 'access site-wide contact form'
   - 'access shortcuts'
+  - 'restful get entity:node'
+  - 'restful get entity:taxonomy_term'
+  - 'restful get entity:file'

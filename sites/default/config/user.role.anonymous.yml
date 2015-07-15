@@ -12,3 +12,6 @@ permissions:
   - 'use text format restricted_html'
   - 'access comments'
   - 'access site-wide contact form'
+  - 'restful get entity:node'
+  - 'restful get entity:taxonomy_term'
+  - 'restful get entity:file'
