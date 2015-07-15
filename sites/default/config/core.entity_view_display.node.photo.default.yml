@@ -1,0 +1,35 @@
+uuid: 2cfcd10f-df1b-499e-a100-fa9965c5e8de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.photo.comment
+    - field.field.node.photo.field_image
+    - node.type.photo
+  module:
+    - comment
+    - image
+    - user
+id: node.photo.default
+targetEntityType: node
+bundle: photo
+mode: default
+content:
+  comment:
+    weight: 102
+    label: above
+    settings:
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+  field_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden: {  }

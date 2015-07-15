@@ -1,27 +1,17 @@
 resources:
-  'entity:node':      # URL: /node/{nodeId}
-    GET:              # HTTP Method
-      supported_formats:
-        - hal_json    # Format query parameter: ?format=hal_json
-        - json        # Format query parameter: ?format=json
-      supported_auth:
-        - basic_auth  # HTTP Authorization header
-        - cookie      # HTTP Cookie header
-    POST:
+  'entity:node':
+    GET:
       supported_formats:
         - hal_json
+        - json
       supported_auth:
         - basic_auth
         - cookie
-    PATCH:
+  'entity:taxonomy_term':
+    GET:
       supported_formats:
         - hal_json
-      supported_auth:
-        - basic_auth
-        - cookie
-    DELETE:
-      supported_formats:
-        - hal_json
+        - json
       supported_auth:
         - basic_auth
         - cookie

@@ -1,0 +1,67 @@
+uuid: 4b23e5bb-eae5-4f00-9100-fd74cd047f07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.photo.comment
+    - field.field.node.photo.field_image
+    - node.type.photo
+  module:
+    - comment
+    - image
+    - path
+id: node.photo.default
+targetEntityType: node
+bundle: photo
+mode: default
+content:
+  comment:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
