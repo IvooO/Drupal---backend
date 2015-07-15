@@ -1,4 +1,5 @@
 module:
+  basic_auth: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -16,6 +17,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
