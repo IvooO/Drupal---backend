@@ -1,0 +1,28 @@
+uuid: 0125127a-2e6f-4e87-8100-edeaae0fd8ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.article
+  module:
+    - entity_reference
+id: node.article.field_category
+field_name: field_category
+entity_type: node
+bundle: article
+label: Category
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category: category
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
