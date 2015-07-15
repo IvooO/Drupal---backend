@@ -1,0 +1,11 @@
+uuid: a1bb8f2e-07b3-417a-b600-b4a1973e6e64
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_promote_action
+label: 'Promote content to front page'
+type: node
+plugin: node_promote_action
+configuration: {  }
