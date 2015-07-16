@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - node.type.article
+    - taxonomy.vocabulary.category
   module:
     - node
     - rest
@@ -70,14 +72,16 @@ display:
             last: 'last »'
           quantity: 9
       style:
-        type: serializer
-      row:
-        type: fields
+        type: default
         options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       fields:
         title:
           id: title
@@ -180,8 +184,8 @@ display:
             value: all
             title_enable: false
             title: All
-          title_enable: false
-          title: ''
+          title_enable: true
+          title: '%1 Articles'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
@@ -195,11 +199,16 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: 'entity:taxonomy_term'
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            bundles:
+              category: category
+            operation: view
+            multiple: 0
+            access: false
           break_phrase: false
           not: false
           plugin_id: numeric
@@ -208,7 +217,23 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - request_format
+        - url
+        - 'url.query_args.pagers:0'
+        - 'user.node_grants:view'
+        - user.permissions
+      cacheable: false
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: categories/%
+    cache_metadata:
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - url
         - 'url.query_args.pagers:0'
         - 'user.node_grants:view'
@@ -221,7 +246,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: categories/%
+      path: api/categories/%
       pager:
         type: some
         options:
