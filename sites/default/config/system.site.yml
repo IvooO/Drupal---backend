@@ -1,11 +1,11 @@
 uuid: 5a281947-9607-40cf-8e50-800d7b526248
-name: Site-Install
+name: 'Tall Tails'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /categories
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

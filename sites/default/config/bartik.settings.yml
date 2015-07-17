@@ -1,0 +1,14 @@
+features:
+  logo: true
+  name: false
+  slogan: false
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+logo:
+  use_default: false
+  path: 'public://Tall_Tails_75x75.png'
+favicon:
+  use_default: true
+  path: ''
