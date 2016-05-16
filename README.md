@@ -8,3 +8,5 @@ This is the back end of the application, which is a [Drupal 8](http://drupal.org
 To get started with this application, clone the project down, install the Drupal site, and set your staging config directory in settings.php to sites/default/config.  Then run a configuration import to enact the necessary configuration to serve the app.
 
 This backend is currently set up for demo purposes at http://talltails.lastcallmedia.com, and you can use this for testing.  No guarantees about how long it will say up though...
+# drupal-foodmet
+# foodmet-backend
